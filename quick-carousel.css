@@ -1,0 +1,92 @@
+.quickCarouselGalleryBox {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    display: none;
+
+    /* display: grid; */
+   
+    grid-template-rows: 40px 1fr 80px;
+    backdrop-filter: blur(5px);
+
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.quickCarouselGalleryBox .gallery_top_bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-end;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.quickCarouselGalleryBox .gallery_slider {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.quickCarouselGalleryBox .gallery_slider .gallery_back_button, .quickCarouselGalleryBox .gallery_slider .gallery_forward_button{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+
+}
+
+.quickCarouselGalleryBox .gallery_slider .gallery_central_image {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    overflow: auto;
+}
+
+.quickCarouselGalleryBox .gallery_thumbnails {
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    overflow-x: auto;
+}
+
+.quickCarouselGalleryBox .gallery_thumbnails img {
+    max-height: calc(100% - 10px);
+    border-radius: 3px;
+    object-fit: cover;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    transition: all ease .24s;
+}
+
+.quickCarouselGalleryBox .gallery_thumbnails img.active {
+    border: 1px solid black;
+    outline: 1px solid black;
+}
+
+.quickCarouselGalleryBox .gallery_thumbnails img:hover {
+    transform: scale(1.05);
+}
+
+.quickCarouselGalleryBox .gallery_slider img {
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;
+}
+
+.quickCarouselGalleryBox svg {
+    cursor: pointer;
+}
+
+.quickCarouselGalleryBox .gallery_top_bar svg {
+    transform: scale(.75);
+}
