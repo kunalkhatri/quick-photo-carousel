@@ -116,6 +116,3 @@ class quickCarousel {
 
 }
 export default quickCarousel;
-
-// Quick pointers
-// Make sure css style position for parent div is relative
